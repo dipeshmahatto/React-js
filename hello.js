@@ -99,33 +99,65 @@
 // }
 
 // Status !!!
-let status = 200;
-switch (status) {
-  case 201:
-    console.log("Created");
-    break;
+// let status = 200;
+// switch (status) {
+//   case 201:
+//     console.log("Created");
+//     break;
 
-  case 400:
-    console.log("Bad request");
-    break;
+//   case 400:
+//     console.log("Bad request");
+//     break;
 
-  case 401:
-    console.log("UnAuthorized");
-    break;
+//   case 401:
+//     console.log("UnAuthorized");
+//     break;
 
-  case 403:
-    console.log("ForBidden");
-    break;
+//   case 403:
+//     console.log("ForBidden");
+//     break;
 
-  case 500:
-    console.log("..");
-    break;
+//   case 500:
+//     console.log("..");
+//     break;
 
-  case 200:
-    console.log("Ok");
-    break;
+//   case 200:
+//     console.log("Ok");
+//     break;
 
-  default:
-    console.log("Invalid");
-}
+//   default:
+//     console.log("Invalid");
+// }
+ 
 
+// for loop !!!
+
+// for(let i = 0 ; i <=10;i++){
+//     console.log("I Love JavaScript " + i);
+// }
+// for (let i = 1; i <= 10; i++) {
+//   console.log("2 * " + i + " = " + i * 2);
+//   console.log();
+// }
+// for (let i = 0; i <= 20; i++) {
+//   if (i % 2 == 0) {
+//     console.log(`The even Number are:${i}`);
+//   }
+// }
+// for (let i = 0; i <= 20; i++) {
+//   if (i % 2 !== 0) {
+//     console.log(`The odd Number are:${i}`);
+//   }
+// }
+
+
+const arr =[3,4,5,6,7];
+// let sum =0;
+// for(let i = 0 ;i<arr.length;i++){
+//     sum +=arr[i];
+// }
+
+// console.log(`The Sum of Array is :${sum}`);
+console.log(arr);
+console.log(arr[2]);
+console.log(typeof arr);

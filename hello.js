@@ -128,7 +128,6 @@
 //   default:
 //     console.log("Invalid");
 // }
- 
 
 // for loop !!!
 
@@ -150,14 +149,97 @@
 //   }
 // }
 
-
-const arr =[3,4,5,6,7];
+// const arr =[3,4,5,6,7];
 // let sum =0;
 // for(let i = 0 ;i<arr.length;i++){
 //     sum +=arr[i];
 // }
 
 // console.log(`The Sum of Array is :${sum}`);
-console.log(arr);
-console.log(arr[2]);
-console.log(typeof arr);
+// console.log(arr);
+// console.log(arr[2]);
+// console.log(typeof arr);
+
+// let ans =[3,4,5,6,7,8,"apple","carrot"] // data structure
+// console.log(ans);
+// console.log(ans[3]);
+
+// const arr = [3, 6, 8, 9, 2, 3, 1];
+
+//splice
+// arr.splice(1,2);
+// console.log(arr);
+
+// let rsult=arr.slice(1,3);
+// console.log(rsult);
+
+//indeXof
+// let res = arr.lastIndexOf(3);
+// console.log(res);
+// let arr = [];
+// let sum = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   arr.push(i);
+// }
+// console.log(arr);
+
+// for (let i = 1; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(`the sum of arr is :${sum}`);
+
+//length
+// console.log(arr.length);
+//push
+// arr.push(4)
+// console.log(arr);
+
+//pop
+// arr.pop();
+// console.log(arr)
+
+//shift
+// arr.shift()
+// console.log(arr)
+
+//unishift
+// arr.unshift(14)
+// console.log(arr)
+
+//icludes
+// let res = arr.includes(4)
+// console.log(res);
+
+// const output=["a","b","c"];
+// console.log(output.join("")); // - , space
+
+//object
+// const person = {
+//   name: "Dipesh Mahato",
+//   age: "21",
+//   occupation: "student",
+//   eduction: "bca",
+//   ismarried: false,
+//   address: {
+//     street: "bafal",
+//     city: "kathmandu",
+//     country: "nepal",
+//     province:{
+//         name:"Bagmati"
+//     }
+//   },
+
+//   greet: function () {
+//     console.log(
+//       `Hello my name is: ${this.name}. And i am ${this.age} years old.`
+//     );
+//   },
+// };
+
+// console.log(person);
+// console.log(person.address.street);
+// person.greet();
+
+
+

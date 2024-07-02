@@ -241,5 +241,39 @@
 // console.log(person.address.street);
 // person.greet();
 
+// function
+
+// function myfunction(){
+//     console.log("Hey You");
+// }
+// myfunction();
+
+// Parameteries funtion
+// function Sum(a,b){
+//     console.log("The sum of the number :" + (a+b));
+// }
+// Sum(5,8);
+
+// function areaCircle(r) {
+//   console.log(`The area of circle of radius ${r} is : ${r * r * Math.PI}`);
+// }
+
+// areaCircle(5);
 
 
+function CalculateTotal(cartItems,taxRate){
+    let total = 0;
+    for (let i = 0;i<cartItems.lenth;i++){
+        total+= cartItems[i].price*cartItems[i].quantity;
+    }
+    total += total*taxRate;
+    return total;
+}
+
+let cart = [
+    {name:"Dr Martin",Price:8000,quantity:1},
+    {name :"Sb Dunk",Price:4000,quantity:2}
+]
+
+const result = CalculateTotal(cart,0.02);
+console.log(`you full and final payment is :${result}`);

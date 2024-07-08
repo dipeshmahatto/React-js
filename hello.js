@@ -260,20 +260,71 @@
 
 // areaCircle(5);
 
+// function CalculateTotal(cartItems,taxRate){
+//     let total = 0;
+//     for (let i = 0;i<cartItems.lenth;i++){
+//         total+= cartItems[i].price*cartItems[i].quantity;
+//     }
+//     total += total*taxRate;
+//     return total;
+// }
 
-function CalculateTotal(cartItems,taxRate){
-    let total = 0;
-    for (let i = 0;i<cartItems.lenth;i++){
-        total+= cartItems[i].price*cartItems[i].quantity;
-    }
-    total += total*taxRate;
-    return total;
-}
+// let cart = [
+//     {name:"Dr Martin",Price:8000,quantity:1},
+//     {name :"Sb Dunk",Price:4000,quantity:2}
+// ]
 
-let cart = [
-    {name:"Dr Martin",Price:8000,quantity:1},
-    {name :"Sb Dunk",Price:4000,quantity:2}
-]
+// const result = CalculateTotal(cart,0.02);
+// console.log(`you full and final payment is :${result}`);
 
-const result = CalculateTotal(cart,0.02);
-console.log(`you full and final payment is :${result}`);
+// function myFun(){
+//     let a = prompt("Enter first Number ?");
+//     let b = prompt("Enter Second Number ?");
+// }
+
+// myfunction()
+
+ //scoping 
+
+// function myFunc() {
+//   if (true) {
+//     var x = 90;
+//     let y = 70;
+//     const z = 30;
+//     console.log(y);
+//     console.log(z);
+//   }
+//   console.log(x);
+// }
+// myFunc();
+
+// Dom
+// console.log(document.body);
+let result= document.getElementById("hello");
+// console.log(result);
+result.innerText = "I have many Proof";
+result.style.backgroundColor = "red";
+result.style.color = "white";
+result.style.textAlign = "center";
+
+let output= document.getElementsByClassName("myClass")[0];
+// console.log(output);
+output.innerText = "Dipesh";
+output.style.backgroundColor = "blue";
+output.style.color = "white";
+output.style.textAlign = "center";
+
+let ans= document.getElementsByClassName("myClass");
+
+ans[1].innerText = "Fine";
+ans[1].style.backgroundColor = "yellow";
+ans[1].style.color = "black";
+ans[1].style.textAlign = "center";
+
+let show= document.getElementsByTagName("span");
+
+show[1].innerText = "spanning";
+show[1].style.backgroundColor = "green";
+show[1].style.color = "black";
+show[1].style.textAlign = "center";
+

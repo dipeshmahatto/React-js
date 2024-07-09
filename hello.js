@@ -409,8 +409,7 @@
 // let ans = products.every((value,index)=>value.instock);
 // console.log(ans);
 
-
-// foreach 
+// foreach
 // let newArr = [4, 5, 6, 7, 8, 5, 2];
 // let output = newArr.forEach((Value, index) => Value *2);
 // console.log(output);
@@ -445,18 +444,25 @@
 // dis.innerText = ans;
 // document.body.prepend(dis);
 
-
 // reduce (accum-> pervious value, curValue-> current)
-let newArr = [4, 5, 6, 7, 8, 5, 2];
-let output = newArr.reduce((accum,curValue)=>accum+curValue);
-console.log(output);
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.reduce((accum,curValue)=>accum+curValue);
+// console.log(output);
 
-const products = [
-  { id: 1, name: "Dipesh", age: 21, alive: true },
-  { id: 2, name: "ram", age: 23, alive: false },
-  { id: 3, name: "hari", age: 25, alive: true },
-  { id: 4, name: "sita", age: 18, alive: true },
-];
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, alive: true },
+//   { id: 2, name: "ram", age: 23, alive: false },
+//   { id: 3, name: "hari", age: 25, alive: true },
+//   { id: 4, name: "sita", age: 18, alive: true },
+// ];
 
-let ans = products.reduce((total,curValue)=>total+curValue.age,0);
-console.log(ans);
+// let ans = products.reduce((total,curValue)=>total+curValue.age,0);
+// console.log(ans);
+
+let heading = document.getElementById("heading");
+let box = document.getElementById("box1");
+let btnClick = document.getElementById("btnClick");
+
+btnClick.addEventListener("click", () => {
+  console.log("Clicked");
+});

@@ -10,7 +10,7 @@
 // SEE Grade check
 // let grade = 85;
 // if (grade >= 90) {
-//   console.log("Grade: A+");
+//   console.log("Grade: A+");7
 // } else if (grade >= 80) {
 //   console.log("Grade: A");
 // } else if (grade >= 70) {
@@ -284,7 +284,7 @@
 
 // myfunction()
 
- //scoping 
+//scoping
 
 // function myFunc() {
 //   if (true) {
@@ -300,31 +300,163 @@
 
 // Dom
 // console.log(document.body);
-let result= document.getElementById("hello");
-// console.log(result);
-result.innerText = "I have many Proof";
-result.style.backgroundColor = "red";
-result.style.color = "white";
-result.style.textAlign = "center";
+// let result= document.getElementById("hello");
+// // console.log(result);
+// result.innerText = "I have many Proof";
+// result.style.backgroundColor = "red";
+// result.style.color = "white";
+// result.style.textAlign = "center";
 
-let output= document.getElementsByClassName("myClass")[0];
+// let output= document.getElementsByClassName("myClass")[0];
+// // console.log(output);
+// output.innerText = "Dipesh";
+// output.style.backgroundColor = "blue";
+// output.style.color = "white";
+// output.style.textAlign = "center";
+
+// let ans= document.getElementsByClassName("myClass");
+
+// ans[1].innerText = "Fine";
+// ans[1].style.backgroundColor = "yellow";
+// ans[1].style.color = "black";
+// ans[1].style.textAlign = "center";
+
+// let show= document.getElementsByTagName("span");
+
+// show[1].innerText = "spanning";
+// show[1].style.backgroundColor = "green";
+// show[1].style.color = "black";
+// show[1].style.textAlign = "center";
+
+// let btn = document.querySelectorAll("button");
+// btn[0].innerText="HeyBtn";
+
+// let output = document.querySelectorAll("button");
+// output[0].innerText="HeyBtn";
+
+// function myFunc(name, age) {
+//   console.log(`hello my name is :${name}. And i am ${age} years old`);
+// }
+
+// myFunc("Ram Thapa",23);
+
+// const merofun = (name,age) => {
+//     console.log(`hello my name is :${name}. And i am ${age} years old`);
+
+// };
+// merofun("sita",23);
+
+//Advanced Array method
+
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// const myFun = (Value,index)=>{
+//     return Value>6
+// }
+// let output = newArr.find(myFun);
 // console.log(output);
-output.innerText = "Dipesh";
-output.style.backgroundColor = "blue";
-output.style.color = "white";
-output.style.textAlign = "center";
 
-let ans= document.getElementsByClassName("myClass");
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.find((Value, index) => {
+//   return Value > 6;
+// });
+// console.log(output);
 
-ans[1].innerText = "Fine";
-ans[1].style.backgroundColor = "yellow";
-ans[1].style.color = "black";
-ans[1].style.textAlign = "center";
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.find((Value, index) => Value > 6);
+// console.log(output);
 
-let show= document.getElementsByTagName("span");
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, instock: true },
+//   { id: 2, name: "ram", age: 23, instock: false },
+//   { id: 3, name: "hari", age: 25, instock: true },
+//   { id: 4, name: "sita", age: 18, instock: true },
+// ];
 
-show[1].innerText = "spanning";
-show[1].style.backgroundColor = "green";
-show[1].style.color = "black";
-show[1].style.textAlign = "center";
+// let ans = products.find((value,index)=>value.instock);
+// console.log(ans)
 
+// filter
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.filter((Value, index) => Value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, instock: true },
+//   { id: 2, name: "ram", age: 23, instock: false },
+//   { id: 3, name: "hari", age: 25, instock: true },
+//   { id: 4, name: "sita", age: 18, instock: true },
+// ];
+
+// let ans = products.filter((value,index)=>!value.instock);
+// console.log(ans);
+
+//some atleast one condition true it returs ture
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.some((Value, index) => Value > 6);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, instock: true },
+//   { id: 2, name: "ram", age: 23, instock: false },
+//   { id: 3, name: "hari", age: 25, instock: true },
+//   { id: 4, name: "sita", age: 18, instock: true },
+// ];
+
+// let ans = products.some((value,index)=>value.instock);
+// console.log(ans);
+
+// Every all the condition must be true then it retur ture else false
+// let ans = products.every((value,index)=>value.instock);
+// console.log(ans);
+
+
+// foreach 
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.forEach((Value, index) => Value *2);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, instock: true },
+//   { id: 2, name: "ram", age: 23, instock: false },
+//   { id: 3, name: "hari", age: 25, instock: true },
+//   { id: 4, name: "sita", age: 18, instock: true },
+// ];
+
+// let ans = products.forEach((value,index)=>value.instock);
+// console.log(ans);
+
+//map dupicates the array to manupulate the array
+
+// let newArr = [4, 5, 6, 7, 8, 5, 2];
+// let output = newArr.map((Value, index) => Value *2);
+// console.log(output);
+
+// const products = [
+//   { id: 1, name: "Dipesh", age: 21, alive: true },
+//   { id: 2, name: "ram", age: 23, alive: false },
+//   { id: 3, name: "hari", age: 25, alive: true },
+//   { id: 4, name: "sita", age: 18, alive: true },
+// ];
+
+// let ans = products.map((value,index)=>value.alive);
+// console.log(ans);
+
+// let dis = document.createElement("h2");
+// dis.innerText = ans;
+// document.body.prepend(dis);
+
+
+// reduce (accum-> pervious value, curValue-> current)
+let newArr = [4, 5, 6, 7, 8, 5, 2];
+let output = newArr.reduce((accum,curValue)=>accum+curValue);
+console.log(output);
+
+const products = [
+  { id: 1, name: "Dipesh", age: 21, alive: true },
+  { id: 2, name: "ram", age: 23, alive: false },
+  { id: 3, name: "hari", age: 25, alive: true },
+  { id: 4, name: "sita", age: 18, alive: true },
+];
+
+let ans = products.reduce((total,curValue)=>total+curValue.age,0);
+console.log(ans);

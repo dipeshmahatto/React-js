@@ -462,7 +462,75 @@
 let heading = document.getElementById("heading");
 let box = document.getElementById("box1");
 let btnClick = document.getElementById("btnClick");
+let input = document.querySelector("input");
 
 btnClick.addEventListener("click", () => {
   console.log("Clicked");
+  btnClick.style.background = "Green";
+  // btnClick.style.border="none";
+  // box1.style.background="red";
+  box.classList.add("BoxClass");
 });
+
+btnClick.addEventListener("mouseover", () => {
+  btnClick.style.background = "yellow";
+});
+
+btnClick.addEventListener("mouseout", () => {
+  btnClick.style.background = "blue";
+});
+
+btnClick.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  btnClick.style.background = "gray";
+});
+
+btnClick.addEventListener("dblclick", () => {
+  document.body.style.background = "green";
+});
+btnClick.addEventListener("click", () => {
+  document.body.style.background = "white";
+});
+
+// window.addEventListener("click", (e) => {
+//   console.log(e.clientX);
+//   console.log(e.clientY);
+// });
+
+input.addEventListener("change",(e)=>{
+  console.log(e)
+  console.log(e.target.value)
+  console.log("changing")
+})
+
+// Math object
+
+// let num = 4.7
+// let num = 4;
+// let ans = Math.round(num)
+// console.log(ans);
+
+// let output  = Math.random();
+// console.log(output);
+
+// let res = Math.sqrt(num);
+// console.log(res);
+
+// let base = 2
+// let extonent = 4
+// let outtt = Math.pow(base,extonent);
+// console.log(outtt);
+
+// // Math.abs --> gives absoulte value
+// function GenerateOTP(){
+//   let otp = Math.floor(10000+Math.random()*900000)
+//   return otp;
+// }
+
+// let annns = GenerateOTP()
+// console.log(annns);
+
+// let now = new Date().getFullYear();
+// let now = new Date().getMonth();
+let now = new Date();
+;console.log(now);

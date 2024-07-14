@@ -497,11 +497,11 @@ btnClick.addEventListener("click", () => {
 //   console.log(e.clientY);
 // });
 
-input.addEventListener("change",(e)=>{
-  console.log(e)
-  console.log(e.target.value)
-  console.log("changing")
-})
+input.addEventListener("change", (e) => {
+  console.log(e);
+  console.log(e.target.value);
+  console.log("changing");
+});
 
 // Math object
 
@@ -533,4 +533,4 @@ input.addEventListener("change",(e)=>{
 // let now = new Date().getFullYear();
 // let now = new Date().getMonth();
 let now = new Date();
-;console.log(now);
+console.log(now);

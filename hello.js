@@ -459,49 +459,49 @@
 // let ans = products.reduce((total,curValue)=>total+curValue.age,0);
 // console.log(ans);
 
-let heading = document.getElementById("heading");
-let box = document.getElementById("box1");
-let btnClick = document.getElementById("btnClick");
-let input = document.querySelector("input");
+// let heading = document.getElementById("heading");
+// let box = document.getElementById("box1");
+// let btnClick = document.getElementById("btnClick");
+// let input = document.querySelector("input");
 
-btnClick.addEventListener("click", () => {
-  console.log("Clicked");
-  btnClick.style.background = "Green";
-  // btnClick.style.border="none";
-  // box1.style.background="red";
-  box.classList.add("BoxClass");
-});
+// btnClick.addEventListener("click", () => {
+//   console.log("Clicked");
+//   btnClick.style.background = "Green";
+// btnClick.style.border="none";
+// box1.style.background="red";
+//   box.classList.add("BoxClass");
+// });
 
-btnClick.addEventListener("mouseover", () => {
-  btnClick.style.background = "yellow";
-});
+// btnClick.addEventListener("mouseover", () => {
+//   btnClick.style.background = "yellow";
+// });
 
-btnClick.addEventListener("mouseout", () => {
-  btnClick.style.background = "blue";
-});
+// btnClick.addEventListener("mouseout", () => {
+//   btnClick.style.background = "blue";
+// });
 
-btnClick.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  btnClick.style.background = "gray";
-});
+// btnClick.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   btnClick.style.background = "gray";
+// });
 
-btnClick.addEventListener("dblclick", () => {
-  document.body.style.background = "green";
-});
-btnClick.addEventListener("click", () => {
-  document.body.style.background = "white";
-});
+// btnClick.addEventListener("dblclick", () => {
+//   document.body.style.background = "green";
+// });
+// btnClick.addEventListener("click", () => {
+//   document.body.style.background = "white";
+// });
 
 // window.addEventListener("click", (e) => {
 //   console.log(e.clientX);
 //   console.log(e.clientY);
 // });
 
-input.addEventListener("change", (e) => {
-  console.log(e);
-  console.log(e.target.value);
-  console.log("changing");
-});
+// input.addEventListener("change", (e) => {
+//   console.log(e);
+//   console.log(e.target.value);
+//   console.log("changing");
+// });
 
 // Math object
 
@@ -532,5 +532,30 @@ input.addEventListener("change", (e) => {
 
 // let now = new Date().getFullYear();
 // let now = new Date().getMonth();
-let now = new Date();
-console.log(now);
+// let now = new Date();
+// console.log(now);
+
+let input = document.getElementById("myinput");
+let btnAdd = document.getElementById("btnadd");
+let btnRemove = document.getElementById("btnremove");
+
+const myFun = () => {
+  // alert(input.value);
+  // sessionStorage.setItem("Key1", input.value);
+  // localStorage.setItem("Key1", input.value);
+  localStorage.setItem("Key1", JSON.stringify({name: "dipesh",age:22}));
+  // console.log(JSON.parse(localStorage.getItem("Key1")));
+
+};
+
+btnRemove.addEventListener("click", () => {
+  localStorage.removeItem("Key1");
+});
+
+btnAdd.addEventListener("click", myFun);
+
+if (localStorage.getItem("Key1")) {
+  // alert(sessionStorage.getItem("key1"));
+  // alert(localStorage.getItem("Key1"));
+  console.log(JSON.parse(localStorage.getItem("Key1")));
+}

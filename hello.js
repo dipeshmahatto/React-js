@@ -535,27 +535,103 @@
 // let now = new Date();
 // console.log(now);
 
-let input = document.getElementById("myinput");
-let btnAdd = document.getElementById("btnadd");
-let btnRemove = document.getElementById("btnremove");
+// let input = document.getElementById("myinput");
+// let btnAdd = document.getElementById("btnadd");
+// let btnRemove = document.getElementById("btnremove");
 
-const myFun = () => {
-  // alert(input.value);
-  // sessionStorage.setItem("Key1", input.value);
-  // localStorage.setItem("Key1", input.value);
-  localStorage.setItem("Key1", JSON.stringify({name: "dipesh",age:22}));
-  // console.log(JSON.parse(localStorage.getItem("Key1")));
+// const myFun = () => {
+// alert(input.value);
+// sessionStorage.setItem("Key1", input.value);
+// localStorage.setItem("Key1", input.value);
+// localStorage.setItem("Key1", JSON.stringify({name: "dipesh",age:22}));
+// console.log(JSON.parse(localStorage.getItem("Key1")));
 
-};
+// };
 
-btnRemove.addEventListener("click", () => {
-  localStorage.removeItem("Key1");
-});
+// btnRemove.addEventListener("click", () => {
+//   localStorage.removeItem("Key1");
+// });
 
-btnAdd.addEventListener("click", myFun);
+// btnAdd.addEventListener("click", myFun);
 
-if (localStorage.getItem("Key1")) {
-  // alert(sessionStorage.getItem("key1"));
-  // alert(localStorage.getItem("Key1"));
-  console.log(JSON.parse(localStorage.getItem("Key1")));
+// if (localStorage.getItem("Key1")) {
+// alert(sessionStorage.getItem("key1"));
+// alert(localStorage.getItem("Key1"));
+//   console.log(JSON.parse(localStorage.getItem("Key1")));
+// }
+
+// SetTimeout and SetTimeIntetrval
+// const myFuc = ()=>{
+//   console.log("HEllO")
+// }
+// setTimeout(myFuc,2000)
+// Alternative
+// setInterval(()=>{
+//   console.log("HEllO")
+// },2000)
+
+// const intervalId= setInterval(()=>{
+//   console.log("I am Dipesh");
+// },1000)
+
+// setTimeout(()=>{
+//   clearInterval(intervalId)
+// },5000)
+
+// function UpdateClock(){
+//   const clock = document.querySelector(".clock")
+//   const now = new Date();
+//   const hours = now.getHours().toString().padStart(2,"0")
+//   const minutes = now.getHours().toString().padStart(2,"0")
+//   const seconds = now.getHours().toString().padStart(2,"0")
+//   clock.innerHTML= `${hours}:${minutes}:${seconds}`
+// }
+
+// setInterval(UpdateClock,1000)
+
+// OOP --> JavaScript
+
+// function Person(name, age, address) {
+//   this.name = name;
+//   this.age = age;
+//   this.address = address;
+//   this.greeting = function () {
+//     let greet = `Hello My name is ${this.name}.I am ${age} old and i live near ${this.address}`;
+//     return greet;
+//   };
+// }
+// const person1 = new Person("Dipesh", 21, "Bafal");
+// const person2 = new Person("Susmita", 22, "Balkhu");
+// console.log(person1, person2);
+// console.log(person1.greeting());
+
+function BankAccount(customerName, balance = 0) {
+  this.customerName = customerName;
+  this.balance = balance;
+  this.accountNumber = Date.now();
+
+  this.deposite = function (amount) {
+    this.balance += amount;
+  };
+
+  this.withdraw = function (amount) {
+    this.balance -= amount;
+  };
 }
+// const ramAccount = new BankAccount("Dipesh", 10000);
+// const samAccount = new BankAccount("Sam", 10000);
+// ramAccount.deposite(5000);
+
+// console.log(ramAccount, samAccount);
+
+const addform = document.querySelector("#addform");
+const customerName = document.querySelector("#customerName");
+const balance = document.querySelector("#balance");
+
+let accounts =[];
+addform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = new BankAccount(customerName.value,+balance.value)
+  accounts.push(account)
+  console.log(accounts);
+});

@@ -2,7 +2,13 @@
     margin: 0;
 }
 
-.BoxClass{
+/* .BoxClass{
     background-color: red;
     border-radius: 15px;
-}   
+}  */
+
+.clock{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}

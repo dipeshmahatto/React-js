@@ -680,7 +680,32 @@ class BankAccount {
   }
 }
 
-const ramAccount = new BankAccount("Ram Thapa", 4000);
-const shayam = new BankAccount("shayam thakar", 4000);
+class CurrentAccount extends BankAccount {
+  constructor(customerName, balance) {
+    super(customerName, balance);
+  }
+  takeBusinessLoan(amount, taxRate) {
+    let ans = amount + (amount + taxRate) / 100;
+    console.log(`Interset sahil ko loan is :${ans}`);
+  }
+}
 
+//saving account
+
+class SavingAccount extends BankAccount {
+  constructor(customerName, balance) {
+    super(customerName, balance);
+  }
+  takePersonlLoan(amount, taxRate) {
+    let ans = amount + (amount + taxRate) / 100;
+    console.log(`Interset sahil ko loan is :${ans}`);
+  }
+}
+
+const ramAccount = new SavingAccount("Ram Thapa", 4000);
+const shayam = new BankAccount("shayam thakar", 4000);
+// ramAccount.deposite(5000);
+ramAccount.takePersonlLoan(1000,10);
 console.log(ramAccount, shayam);
+
+

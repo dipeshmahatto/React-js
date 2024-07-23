@@ -665,47 +665,98 @@
 
 //Class in javaScript
 
-class BankAccount {
-  constructor(customerName, balance = 0) {
-    this.customerName = customerName;
-    this.balance = balance;
-    this.accountNumber = Math.floor(Math.random() + 1000000000);
-  }
-  deposite(amount) {
-    this.balance += amount;
-  }
+// class BankAccount {
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Math.floor(Math.random() + 1000000000);
+//   }
+//   deposite(amount) {
+//     this.balance += amount;
+//   }
 
-  withdraw(amount) {
-    this.balance -= amount;
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+//   takeBusinessLoan(amount, taxRate) {
+//     let ans = amount + (amount + taxRate) / 100;
+//     console.log(`Interset sahil ko loan is :${ans}`);
+//   }
+// }
+
+// //saving account
+
+// class SavingAccount extends BankAccount {
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+//   takePersonlLoan(amount, taxRate) {
+//     let ans = amount + (amount + taxRate) / 100;
+//     console.log(`Interset sahil ko loan is :${ans}`);
+//   }
+// }
+
+// const ramAccount = new SavingAccount("Ram Thapa", 4000);
+// const shayam = new BankAccount("shayam thakar", 4000);
+// // ramAccount.deposite(5000);
+// ramAccount.takePersonlLoan(1000,10);
+// console.log(ramAccount, shayam);
+
+// Encapsulation
+
+// class BankAccount {
+//   customerName;
+//   #balance = 0;
+//   accountNumber;
+//   constructor(customerName, balance) {
+//     this.customerName = customerName;
+//     this.#balance = balance;
+//     this.accountNumber = Date.now();
+//   }
+
+//   setBalance(amount) {
+//     this.#balance = amount;
+//   }
+
+//   getBalance(){
+//     return this.#balance;
+//   }
+
+//   deposite(amount) {
+//     this.#balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//   }
+// }
+// const ramAccount = new BankAccount("Ram Thapa", 4000);
+// const shayam = new BankAccount("shayam thakar", 4000);
+// ramAccount.setBalance(50000)
+// console.log(ramAccount, shayam);
+// console.log(ramAccount.getBalance());
+
+class user {
+  constructor(name, address, age) {
+    this.name = name;
+    this.address = address;
+    this.age = age;
+  }
+  static compareByAge(a, b) {
+    return a.age - b.age;
   }
 }
 
-class CurrentAccount extends BankAccount {
-  constructor(customerName, balance) {
-    super(customerName, balance);
-  }
-  takeBusinessLoan(amount, taxRate) {
-    let ans = amount + (amount + taxRate) / 100;
-    console.log(`Interset sahil ko loan is :${ans}`);
-  }
-}
+let user1 = new user("Dipesh", "janakpur", 22);
+let user2 = new user("surya", "gaushala", 25);
+let user3 = new user("jenisha", "kritipur", 23);
 
-//saving account
-
-class SavingAccount extends BankAccount {
-  constructor(customerName, balance) {
-    super(customerName, balance);
-  }
-  takePersonlLoan(amount, taxRate) {
-    let ans = amount + (amount + taxRate) / 100;
-    console.log(`Interset sahil ko loan is :${ans}`);
-  }
-}
-
-const ramAccount = new SavingAccount("Ram Thapa", 4000);
-const shayam = new BankAccount("shayam thakar", 4000);
-// ramAccount.deposite(5000);
-ramAccount.takePersonlLoan(1000,10);
-console.log(ramAccount, shayam);
-
-
+const users = [user1, user2, user3];
+users.sort(user.compareByAge);
+console.log(users);

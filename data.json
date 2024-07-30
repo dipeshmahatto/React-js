@@ -1,0 +1,21 @@
+{
+  "person": {
+    "name": "Dipesh Singh",
+    "age": 22,
+    "ismarried": "false"
+  },
+  "products": [
+    {
+      "id": 1,
+      "productName": "Gurkhas Pant",
+      "price": 5000,
+      "instock": true
+    },
+    {
+      "id": 2,
+      "productName": "Cargo Pant",
+      "price": 3000,
+      "instock": true   
+    }
+  ]
+}

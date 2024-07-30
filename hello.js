@@ -742,21 +742,137 @@
 // console.log(ramAccount, shayam);
 // console.log(ramAccount.getBalance());
 
-class user {
-  constructor(name, address, age) {
-    this.name = name;
-    this.address = address;
-    this.age = age;
-  }
-  static compareByAge(a, b) {
-    return a.age - b.age;
-  }
-}
+// class user {
+//   constructor(name, address, age) {
+//     this.name = name;
+//     this.address = address;
+//     this.age = age;
+//   }
+//   static compareByAge(a, b) {
+//     return a.age - b.age;
+//   }
+// }
 
-let user1 = new user("Dipesh", "janakpur", 22);
-let user2 = new user("surya", "gaushala", 25);
-let user3 = new user("jenisha", "kritipur", 23);
+// let user1 = new user("Dipesh", "janakpur", 22);
+// let user2 = new user("surya", "gaushala", 25);
+// let user3 = new user("jenisha", "kritipur", 23);
 
-const users = [user1, user2, user3];
-users.sort(user.compareByAge);
-console.log(users);
+// const users = [user1, user2, user3];
+// users.sort(user.compareByAge);
+// console.log(users);
+
+// Stack in javascript
+
+// console.log("Hello World");
+// function Display() {
+//   for (let i = 0; i < 100000000; i++) {
+//     console.log(i);
+//   }
+// }
+
+// Display()
+
+// setTimeout(()=>{
+//   alert("I Love JS");
+// },4000)
+
+// console.log("HEY Dipesh");
+
+// function sum(a, b,cb) {
+//   const ans = a + b;
+//   cb(ans)
+// }
+// function Display(result) {
+//   const h1 = document.createElement("h1");
+//   h1.innerText = `the sum of Result is :${result}`;
+//   document.body.append(h1);
+// }
+
+// sum(4,9,Display)
+
+// let arr = [4, 5, 6, 7, 8, 9, 2, 1];
+
+// function Calculate(arr = [], cb) {
+//   let ans = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = cb(arr[i]);
+//     ans.push(arr[i] * 10);
+//   }
+//   console.log(ans);
+// }
+
+// Calculate(arr, (a) => a * 10);
+// Calculate(arr, (a) => a / 10);
+// arr.forEach((value, index) => {});
+
+//callback
+
+// let product = [];
+// let AddProduct = () => {
+//   setTimeout(() => {
+//     product.push(
+//       { id: 1, name: "Dipesh", price: 8000, instock: true },
+//       { id: 2, name: "surya", price: 1000, instock: false }
+//     );
+//     console.log(product);
+//   }, 4000);
+// };
+
+// const DisplayProduct = () => {
+//   setTimeout(() => {
+//     product.forEach((product) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = product.name;
+//       document.body.append(h1);
+//     });
+//   },1000);
+// };
+
+// AddProduct();
+
+//promise
+// const res = new Promise((resolve,rejected)=>{
+//   resolve("Promise Fulfilled");
+// })
+// const res = new Promise((resolve, rejected) => {
+//   let success = true;
+//   if (success) {
+//     resolve("Promissed Fulfilled");
+//   } else {
+//     rejected("Promissed rejected");
+//   }
+// });
+// res.then((param) => console.log(param)).catch((error) => console.log(error));
+
+// const fetchedData = () => {
+//   fetch("https://catfact.ninja/fact")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = data.fact;
+//       document.body.appendChild(h1);
+//     })
+//     .catch((error) => console.log(error));
+// };
+// fetchedData();
+const fetchedData = async () => {
+  try {
+    const res = await fetch(`https://catfact.ninja/facts`);
+    const data = await res.json();
+    // const h1 = document.createElement("h1");
+    // h1.innerText = data.fact;
+    // document.body.append(h1);
+    // console.log(data);
+    const facts = data.data;
+    facts.forEach((value, index) => {
+      const h1 = document.createElement("h1");
+      // const br = document.createElement("br");
+      h1.innerText = value.fact;
+      document.body.append(h1);
+      // document.body.append(br);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+fetchedData();

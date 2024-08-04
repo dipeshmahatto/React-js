@@ -4,7 +4,7 @@ const dateField = document.querySelector(".weather2 span");
 const iconField = document.querySelector(".weather3 img");
 const weatherField = document.querySelector(".weather3 span");
 const form = document.querySelector("form");
-const input = document.querySelector(".searchField");
+const input = document.querySelector(".searchfield");
 
 let target = "Kathmandu";
 
@@ -47,7 +47,6 @@ const fetchData = async (target) => {
 };
 
 fetchData(target);
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (input.value.trim() === "") {

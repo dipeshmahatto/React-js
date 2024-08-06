@@ -855,24 +855,96 @@
 //     .catch((error) => console.log(error));
 // };
 // fetchedData();
-const fetchedData = async () => {
-  try {
-    const res = await fetch(`https://catfact.ninja/facts`);
-    const data = await res.json();
-    // const h1 = document.createElement("h1");
-    // h1.innerText = data.fact;
-    // document.body.append(h1);
-    // console.log(data);
-    const facts = data.data;
-    facts.forEach((value, index) => {
-      const h1 = document.createElement("h1");
-      // const br = document.createElement("br");
-      h1.innerText = value.fact;
-      document.body.append(h1);
-      // document.body.append(br);
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-fetchedData();
+// const fetchedData = async () => {
+//   try {
+//     const res = await fetch(`https://catfact.ninja/facts`);
+//     const data = await res.json();
+// const h1 = document.createElement("h1");
+// h1.innerText = data.fact;
+// document.body.append(h1);
+// console.log(data);
+//     const facts = data.data;
+//     facts.forEach((value, index) => {
+//       const h1 = document.createElement("h1");
+//       // const br = document.createElement("br");
+//       h1.innerText = value.fact;
+//       document.body.append(h1);
+//       // document.body.append(br);
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// fetchedData();
+
+// Bom (Browser object model)
+
+// console.log(document);
+// console.log(navigator);
+// console.log(history);
+// console.log(screen);
+// console.log(location);
+
+// console.log(location.protocol);
+// console.log(location.port);
+// console.log(location.hostname);
+// console.log(location.href);
+
+// navigator.geolocation.getCurrentPosition((a)=>console.log(a.coords.latitude));
+
+// Hoisting in javascript
+// console.log(x);
+// const x = 90;
+
+// let result = myFunc(9, 8);
+// console.log(result);
+
+// function myFunc() {
+//   return a + b;
+// }
+
+// let result = myFunc(8,9)
+// console.log(result);
+
+const st = "Dipesh Mahato"
+
+function reverse(str){
+    console.log(str.split("").reverse().join(""))
+}
+
+reverse(st)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
